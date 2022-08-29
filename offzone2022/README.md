@@ -1,6 +1,6 @@
 # История взлома бейджа offzone2022, часть 1
 
-![Badge](/offzone2022/badge1.jpg?raw=true "Badge")
+| ![Badge](/offzone2022/badge1.jpg?raw=true "Badge") | ![Badge3](/offzone2022/badge3.jpg?raw=true "Badge3") |
 
 1. Ссылки на ресурсы с полезной информацией
 
