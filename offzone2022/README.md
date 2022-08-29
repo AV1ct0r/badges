@@ -2,7 +2,7 @@
 
 ![Badge](/offzone2022/badge1.jpg?raw=true "Badge")
 
-1. Ссылки ресурсы с полезной информацией
+1. Ссылки на ресурсы с полезной информацией
 
 <b>[STM32F070F6P6 Datasheet](https://www.st.com/resource/en/datasheet/stm32f070f6.pdf)</b><br/>
 <b>[STM32F070F6P6 Reference Manual](https://www.st.com/resource/en/reference_manual/rm0360-stm32f030x4x6x8xc-and-stm32f070x6xb-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)</b><br/>
