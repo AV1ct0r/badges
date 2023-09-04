@@ -4,15 +4,21 @@
 :-------------------------:|:-------------------------:
 ![](/offzone2023/badge1.jpg?raw=true) | ![](/offzone2023/badge3.jpg?raw=true) |
 
-1. Ссылки на ресурсы с полезной информацией
+1. Найденные отличия от бейджа прошлого года
+   1.1. 3 коннектора для аддонов вместо 2
+   1.2. Другой микроконтроллер: STM32F030C8T6 вместо STM32F070F6P6: 64 КБ Flash-памяти вместо 32 КБ и 8 КБ SRAM вместо 6 КБ. Одной ночи для снятия дампа прошивки не хватило, докопировалась только к середине второго дня ( на будущее - нужно одновременной дампить с нескольких бейджей или использовать более быстрые атаки)
+   1.3. Ссылка на регистрацию бейджа в telegram-боте тепепрь наклеена в виде QR-кода на сам бейдж, а не отображается на экране специального банкомата.
+   1.4. ID бейджа и ключ hmac теперь не рассчитываются исходя из UID микроконтроллера, а зашиты в прошивку: 0x34 байта с адреса 0x0800FC00 теперь у всех разные, а в прошлом году на всех бейджах была одинаковая прошивка.
+   
+2. Ссылки на ресурсы с полезной информацией
 
-<b>[STM32F070F6P6 Datasheet](https://www.st.com/resource/en/datasheet/stm32f070f6.pdf)</b><br/>
-<b>[STM32F070F6P6 Reference Manual](https://www.st.com/resource/en/reference_manual/rm0360-stm32f030x4x6x8xc-and-stm32f070x6xb-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)</b><br/>
+<b>[STM32F030C8T6 Datasheet](https://www.st.com/resource/en/datasheet/stm32f030c8.pdf)</b><br/>
+<b>[STM32F030C8T6 Reference Manual](https://www.st.com/resource/en/reference_manual/rm0360-stm32f030x4x6x8xc-and-stm32f070x6xb-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)</b><br/>
 <b>[Dumping the flash of the Syscan 2015 badge](https://gist.github.com/egirault/7b3fe7041e1bf5e2258ed5df7083f14d)</b><br/>
 
 Из железа потребуются ST-Link, Bus Pirate, логический анализатор KingstVis и провода.
 
-2. На бейдже стоит контроллер STM32F030C8T6, в нем есть 64 KB Flash-памяти с прошивкой (0x10000 байт с адреса 0x08000000), 8 KB SRAM (0x2000 байт с адреса 0x20000000) и SystemMemory с OptionBytes (0x1000 байт с адреса 0x1FFFEC00). Также есть SWD-разьем (5 дырок) и UART-интерфейс для подключения к банкомату и магазинным киоскам (4 металлизированные полоски снизу). Подключаемся ST-Link по протоколу SWD и считываем OptionBytes:
+3. На бейдже стоит контроллер STM32F030C8T6, в нем есть 64 KB Flash-памяти с прошивкой (0x10000 байт с адреса 0x08000000), 8 KB SRAM (0x2000 байт с адреса 0x20000000) и SystemMemory с OptionBytes (0x1000 байт с адреса 0x1FFFEC00). Также есть SWD-разьем (5 дырок) и UART-интерфейс для подключения к банкомату и магазинным киоскам (4 металлизированные полоски снизу). Подключаемся ST-Link по протоколу SWD и считываем OptionBytes:
 
 ![OptionBytes](/offzone2023/STM32F030C8T6_OptionBytes.png?raw=true "Option Bytes")
 
