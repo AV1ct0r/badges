@@ -55,17 +55,79 @@
 
 5. Чтобы проверить, что передается по UART-разьему, к бейджу был подключен логический анализатор KingstVis и записаны трейсы в случае автономной работе и при подключении бейджа к стенду для начисления оффкойонов. При анализе трейсов можно заметить, что бейдж ничего не принимает по UART-интерфейсу, а только каждые 550 мс отправляет 40 байт:
 
+![reader1](/offzone2023/reader1.jpg?raw=true "reader1")
+
 ![uart1](/offzone2023/uart1.png?raw=true "uart1")
 
 2068ab56d4c3a09a8cc7f681 f42e6305be8b8477 ed4f6a6e51d943149e9b76017a984be5c15618e5
 2068ab56d4c3a09a8cc7f681 909517653b6c34bc 8ff5083445d123be323504545ed33ddccb77e9fd
 2068ab56d4c3a09a8cc7f681 1c9e0311b5137f61 9041fe8b30d9f260e0492ca103f12dda173796a8
 
-Первые 12 байт - ID бейджа в системе, следующие 8 байт случайные, последние 20 байт - hmac_sha1 от первых 20 байт, рассчитанный с использованием KEY1.
+Первые 12 байт - ID бейджа в системе, следующие 8 байт случайные, последние 20 байт - hmac_sha1 от первых 20 байт, рассчитанный с использованием KEY1. Для проверки был написан скрипт parse.php:
+
+~~~
+
+<?php
+
+  $A = hex2bin("2068AB56D4C3A09A8CC7F681");
+  $B = hex2bin("E063D5310005B0EA");
+  $C = hex2bin("AB03049350CCA72D693D2086974C879696B1764F4177D98365DC0E6AE90A36E5");
+
+  $s = file_get_contents($argv[1]);
+  preg_match_all('#[\d\.\-]+,0x(\w{2}),,#', $s, $matches);
+  $s = implode("", $matches[1]);
+  $s = wordwrap($s, 80, "\n", true);
+
+  $s = explode("\n", $s);
+  foreach($s as $r)
+  {
+    $r = hex2bin($r);
+    assert(substr($r, 0, 12) === $A);
+    $x = substr($r, 12, 8);
+    $y = substr($r, 20);
+    echo bin2hex($A)." ".bin2hex($x)." ".bin2hex($y)." : ".hash_hmac("sha1", $A.$x, $C)."\n"; 
+  }
+  
+~~~
 
 ![ida1](/offzone2023/ida1.png?raw=true "ida1")
    
-6. Тогда остается только научиться притворяться чужим бейджом. Перезаписать U_ID чипа нельзя, т.к. он хранится в OTP-области, но можно пропатчить прошивку, чтобы она считывала U_ID из другого места (из своего конца).
+6. На конференции было 2 задания с бейджами прошлого года. Первый их них - NFC. Считать прошивку с бейджа во время конференции не удалось (STM32F103, Readout Protection Level 1), однако в ней ничего интересного нет - просто читает Mifare-карту и выводит дамп в COM-порт. В принципе любой Android и Mifare Classic Tool сделает тоже самое.
+
+![nfc1](/offzone2023/nfc1.jpg?raw=true "nfc1")
+
+~~~
+MIFARE module commands
+0; - This command list
+1,<block number>,<key A/B>,<key (12 hex symbols)>; - Read block. Example: 1,8,a,ffffffffffff;
+2,<block number>,<key A/B>,<key (12 hex symbols)>,<data (32 hex symbols)>; - Write block. Example: 2,8,b,ffffffffffff,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa;
+3; - DuScan a MIFARE card...
+
+...
+
+   0      3   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+          2   F1 2E BD 54  E6 C5 21 23  7A BA 31 0D  97 E2 C2 22  [ 0 0 0 ]
+          1   52 65 65 64  2D 53 6F 6C  6F 6D 6F 6E  2F 6B 45 6B  [ 0 0 0 ]
+          0   23 ED B8 A9  DF 08 04 00  62 63 64 65  66 67 68 69  [ 0 0 0 ]
+
+Scan a MIFARE card...
+
+~~~
+
+На карте полезные данные есть только в первом секторе: "Reed-Solomon/kEk\xF1\x2E\xBD\x54\xE6\xC5\x21\x23\x7A\xBA\x31\x0D\x97\xE2\xC2\x22". Из читаемой части строки становится понятно, что нужно использовать ECC-коды для исправления ошибок. Пишем небольшой python-скрипт
+
+~~~
+
+from reedsolo import RSCodec, ReedSolomonError
+rsc = RSCodec(16)
+rsc.decode(bytearray(b'Reed-Solomon/kEk\xF1\x2E\xBD\x54\xE6\xC5\x21\x23\x7A\xBA\x31\x0D\x97\xE2\xC2\x22'))
+
+~~~
+
+И получаем ответ: "Rf1d-Solomon!FEC"
+
+8.
+9.   Тогда остается только научиться притворяться чужим бейджом. Перезаписать U_ID чипа нельзя, т.к. он хранится в OTP-области, но можно пропатчить прошивку, чтобы она считывала U_ID из другого места (из своего конца).
 
 ![ida1](/offzone2023/ida1.png?raw=true "ida1")
 
