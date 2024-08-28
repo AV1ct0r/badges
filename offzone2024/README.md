@@ -3,9 +3,9 @@
 Name | Photo | MCU and pinout | Readout protection | Firmware files and challenge solutions |  
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 Бейдж |  | STM32F103C8T6<br/>3V3,SWDIO,SWCLK,NRST,GND | RDP Level 1<br/>(SRAM access) |
-Аддон spbctf.ru |  | STM32F103C8T6<br/>3V3,SWDIO,SWCLK,NRST,GND | RDP Level 0<br/>(SRAM, Flash, SystemMemory access) | 
+Аддон spbctf.ru | ![](/offzone2024/20_front.png?raw=true) | STM32F103C8T6<br/>3V3,SWDIO,SWCLK,NRST,GND | RDP Level 0<br/>(SRAM, Flash, SystemMemory access) | [20_STM32F103C8T6_0x20000000_0x5000_SRAM.bin](/offzone2024/20_STM32F103C8T6_0x20000000_0x5000_SRAM.bin)<br/>[20_STM32F103C8T6_0x08000000_0x20000_Flash.bin](/offzone2024/20_STM32F103C8T6_0x08000000_0x20000_Flash.bin)<br/>[20_STM32F103C8T6_0x1FFFF000_0xA00_SystemMemory.bin](/offzone2024/20_STM32F103C8T6_0x1FFFF000_0xA00_SystemMemory.bin)<br/><br/>[20_solution.txt](/offzone2024/20_solution.txt)
 Аддон "Рассвет" |  | STM32F103 | ? | 
 Аддон Positive Labs |  | STM32F411CCU6<br/>3V3,SWCLK,NRST,SWDIO,GND | RDP Level 1<br/>(SRAM access) |
-Аддон Yandex | ESP32-S3 | ? | 
+Аддон Yandex |  | ESP32-S3 | ? | 
 
 
