@@ -1,0 +1,41 @@
+###
+https://t.me/positivelabs
+https://github.com/Ushinbuy/pt-boy/blob/main/README.md
+
+flag1:
+-9993BDA225C21BF095F1764D133375FCF12632DCB5F8F3DDE35E0732E5DD8FA5
++666C61677B9993BDA225C21BF095F1764D133375FCF12632DCB5F8F3DDE35E7D
+
+flag2:
+-1A7772F551A65D09AD79F9B69F726A636641B318E4AA6E8D7DF8A65B6BC76E3B
++666C61677B1A7772F551A65D09AD79F9B69F726A636641B318E4AA6E8D7DF87D
+
+key:
+A1F40E6F40C2FA46948641C8F61F23942CEBA5BF14C2E1144443A1D5A0E001E8
+
+iv:
+__OFFZONE_2024__
+###
+
+from serial import Serial, SerialException
+import binascii
+
+ser = Serial("/dev/ttyACM0", 9600, timeout=3000)
+ser.write(b"fish")
+print(ser.read(8))
+b'Unnamed\x00'
+
+ser.write(b"hamster")
+print(binascii.hexlify(ser.read(8)))
+b'bb7ceff5924444b1'
+
+# flag1: taskSuccess(3);
+ser.write(b"lizard"+binascii.unhexlify("666C61677B9993BDA225C21BF095F1764D133375FCF12632DCB5F8F3DDE35E7D"))
+print(ser.read(3))
+b'OK!'
+
+# flag2: taskSuccess(2);
+ser.write(b"turtle"+binascii.unhexlify("666C61677B1A7772F551A65D09AD79F9B69F726A636641B318E4AA6E8D7DF87D"))
+print(ser.read(3))
+b'OK!'
+
