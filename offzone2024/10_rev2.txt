@@ -1,0 +1,4 @@
+<?php
+  $key = "j00_C4nt_kn0W_Th4t_wiTH0ut_DumPing_tH3_FirmW4r3";
+  $nonce = hex2bin("c41f2980f71e29440569ea56");
+  echo bin2hex($key ^ str_repeat($nonce, 5));

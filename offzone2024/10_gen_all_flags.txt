@@ -1,0 +1,28 @@
+<?php
+
+  $id = hex2bin("127480C30CBDB18C04B217E3");
+  $key = hex2bin("B883099213D19F9A95C8289D52038102BDB4D6478BBF5E7679B8BA321C953F83");
+
+  calc_flag($key, "81Z0ne_CAu9ht_W0LVEz", 0xF00DBABE); // GAME
+  calc_flag($key, "y0u_9iVe_ME_tHe_phr45E_I_9ive_Y0U_C0inz", 0xDEDABABA); // REV1 : 91Mm3_th3_FL49_pl2
+  calc_flag($key, "hOW_4RE_you_FeelIn9_nOw?", 0xDEADC0DE); // REV2 : j00_C4nt_kn0W_Th4t_wiTH0ut_DumPing_tH3_FirmW4r3
+  calc_flag($key, "7app1n9_f0R_C01N2", 0xBABADEDA); // BTNS
+
+  function calc_flag($key, $s, $crc)
+  {
+    $flag = "OFFZone{".$s."_".crc32update($crc, $key)."}";
+    echo $flag."\n";
+  }
+
+  function crc32update($crc32, $data) {
+        $result = $crc32;
+        $length = strlen($data);
+        for ($i = 0; $i < $length; $i++) {
+            $result ^= ord($data[$i]);
+            for ($j = 0; $j < 8; $j++) {
+              if ($result & 1) $result = 0xEDB88320 ^ ($result >> 1);
+              else $result >>= 1;
+            }
+        }
+        return bin2hex(pack("V", $result ^ 0xFFFFFFFF));
+  }
