@@ -42,7 +42,7 @@ Name | Photo | MCU and pinout | Readout protection | Firmware files and challeng
 
    2.5. После реверса прошивки может сделать универсальный скрипт для генерации всех флагов, а также решить rev1 и rev2 задания.
    
-   Скрипт для генерации всех 4 флагов: [10_gen_all_flags.txt](/offzone2024/10_gen_all_flags.txt)
+   Скрипт для генерации всех 4 флагов: [10_gen_all_flags.txt](/offzone2024/10_gen_all_flags.txt).
    Отдельно скрипты для генерации ответов на nonce-бейджа в заданиях [rev1](/offzone2024/10_rev1.txt) и [rev2](/offzone2024/10_rev2.txt)
 
 4. Легкое решение заданий аддона Positive Labs (без написания прошивки USB-I2C адаптера)
