@@ -1,4 +1,4 @@
-# Умные бейджи и аддоны offzone2024 (версия 1.0)
+# "Умные" бейджи и аддоны offzone2024 (версия 1.0)
 
 Name | Photo | MCU and pinout | Readout protection | Firmware files and challenge solutions |  
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
@@ -7,6 +7,12 @@ Name | Photo | MCU and pinout | Readout protection | Firmware files and challeng
 Аддон "Рассвет" | ![](/offzone2024/30_front.png?raw=true) | STM32F103 | ? | 
 Аддон Positive Labs | ![](/offzone2024/40_front.png?raw=true) | STM32F411CCU6<br/>3V3,SWCLK,NRST,SWDIO,GND | RDP Level 1<br/>(SRAM access) | [40_STM32F411CCU6_0x20000000_0x20000_SRAM.bin](/offzone2024/40_STM32F411CCU6_0x20000000_0x20000_SRAM.bin?raw=true)<br/><br/>[40_pt-boy-main.zip](/offzone2024/40_pt-boy-main.zip?raw=true)</br>[40_serial.txt](/offzone2024/40_serial.txt)
 Аддон Yandex | ![](/offzone2024/50_front.png?raw=true) | ESP32-S3 | ? | 
-Куб | ![](/offzone2024/60_front.png?raw=true) | ESP32 | ? | 
+Куб | ![](/offzone2024/60_front.png) | ESP32 | ? | 
 
 
+1. Дамп прошивки бейджа
+   1.1. Приносим с собой Raspberry Pico, ST-Link v2 и сокет QFP48-STM32
+   1.2. В паяльной зоне с помощью фена выпаиваем контроллер с бейджа
+   1.3. Вставляет контроллер в сокет, подключаем Raspberry Pico и ST-Link, дампим прошивку с помощью stm32f1-picopwner
+   ![](/offzone2023/hack2.png)
+   1.4. Достаем контроллер из сокета, наносим на ножки флюс, припаиваем обратно к бейджу
