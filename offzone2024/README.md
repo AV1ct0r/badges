@@ -18,7 +18,7 @@ Name | Photo | MCU and pinout | Readout protection | Firmware files and challeng
    
    1.3. Вставляет контроллер в сокет, подключаем Raspberry Pico и ST-Link, дампим прошивку с помощью stm32f1-picopwner
    
-   ![](/offzone2023/hack2.jpg)
+   ![](/offzone2024/hack2.jpg)
    
    1.4. Достаем контроллер из сокета, наносим на ножки флюс, припаиваем обратно к бейджу
    
