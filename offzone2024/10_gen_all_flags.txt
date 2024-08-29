@@ -1,6 +1,7 @@
 <?php
 
   $id = hex2bin("127480C30CBDB18C04B217E3");
+  $qr = "https://t.me/offzone2024bot?start=2a40b5f16f8f89b8318074d1";
   $key = hex2bin("B883099213D19F9A95C8289D52038102BDB4D6478BBF5E7679B8BA321C953F83");
 
   calc_flag($key, "81Z0ne_CAu9ht_W0LVEz", 0xF00DBABE); // GAME
