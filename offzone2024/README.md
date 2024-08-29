@@ -11,8 +11,14 @@ Name | Photo | MCU and pinout | Readout protection | Firmware files and challeng
 
 
 1. Дамп прошивки бейджа
+   
    1.1. Приносим с собой Raspberry Pico, ST-Link v2 и сокет QFP48-STM32
+   
    1.2. В паяльной зоне с помощью фена выпаиваем контроллер с бейджа
+   
    1.3. Вставляет контроллер в сокет, подключаем Raspberry Pico и ST-Link, дампим прошивку с помощью stm32f1-picopwner
+   
    ![](/offzone2023/hack2.png)
+   
    1.4. Достаем контроллер из сокета, наносим на ножки флюс, припаиваем обратно к бейджу
+   
