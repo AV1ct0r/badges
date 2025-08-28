@@ -2,12 +2,12 @@
 
 Name | Photo | MCU and pinout | Readout protection | Firmware files and challenge solutions |  
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-Бейдж | ![](/offzone2024/10_front.png) | STM32F103CBT6<br/>3V3,SWDIO,SWCLK,NRST,GND | RDP Level 1<br/>(SRAM access) | [10_STM32F103CBT6_0x20000000_0x5000_SRAM.bin](/offzone2025/10_STM32F103C5T6_0x20000000_0x5000_SRAM.bin?raw=true)<br/>[10_STM32F103CBT6_0x08000000_0x20000_Flash.bin](/offzone2025/10_STM32F103CBT6_0x08000000_0x20000_Flash.bin?raw=true)<br/>[10_STM32F103CBT6_0x1FFFF000_0xA00_SystemMemory.bin](/offzone2025/10_STM32F103CBT6_0x1FFFF000_0xA00_SystemMemory.bin?raw=true)
-Аддон bizone (Радио) | STM32F405RGT6<br/>GND,NRST,SWCLK,SWDIO,3V3 | RDP Level 0<br/>(SRAM, Flash, SystemMemory access) | 
-Аддон ptsecurity.com (Медведи) | STM32 | ? |
-Аддон lockpick (Сейф) | ATMEGA | ? |
-Аддон reg.ru | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | 
-Аддон yandex.ru | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | 
-Аддон tbank.ru | NTAG 213 144bytes (NT2H1311G0DU) | PWD: 304B346B</br>PACK: 1337 |
+Бейдж |  | STM32F103CBT6<br/>3V3,SWDIO,SWCLK,NRST,GND | RDP Level 1<br/>(SRAM access) | [10_STM32F103CBT6_0x20000000_0x5000_SRAM.bin](/offzone2025/10_STM32F103CBT6_0x20000000_0x5000_SRAM.bin?raw=true)<br/>[10_STM32F103CBT6_0x08000000_0x20000_Flash.bin](/offzone2025/10_STM32F103CBT6_0x08000000_0x20000_Flash.bin?raw=true)<br/>[10_STM32F103CBT6_0x1FFFF000_0xA00_SystemMemory.bin](/offzone2025/10_STM32F103CBT6_0x1FFFF000_0xA00_SystemMemory.bin?raw=true)
+Аддон bizone (Радио) |  | STM32F405RGT6<br/>GND,NRST,SWCLK,SWDIO,3V3 | RDP Level 0<br/>(SRAM, Flash, SystemMemory access) | [20_STM32F405RGT6_0x1FFF0000_0x8000_SystemMemory_OTP.bin](/offzone2025/20_STM32F405RGT6_0x1FFF0000_0x8000_SystemMemory_OTP.bin)<br/>[20_STM32F405RGT6_0x1FFFC000_0x4000_OptionBytes.bin](/offzone2025/20_STM32F405RGT6_0x1FFFC000_0x4000_OptionBytes.bin)<br/>[20_STM32F405RGT6_0x08000000_0x100000_Flash.bin](/offzone2025/20_STM32F405RGT6_0x08000000_0x100000_Flash.bin)<br/>[20_STM32F405RGT6_0x10000000_0x10000_CCMRAM.bin](/offzone2025/20_STM32F405RGT6_0x10000000_0x10000_CCMRAM.bin)<br/>[20_STM32F405RGT6_0x20000000_0x20000_SRAM.bin](/offzone2025/20_STM32F405RGT6_0x20000000_0x20000_SRAM.bin)
+Аддон ptsecurity.com (Медведи) |  | STM32 | ? |
+Аддон lockpick (Сейф) |  | ATMEGA | ? |
+Аддон reg.ru |  | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [50_ESP32-S3.bin](/offzone2025/50_ESP32-S3.bin)<br/>[50_efuse.txt](/offzone2025/50_efuse.txt)<br/>[50_esptool.txt](/offzone2025/50_esptool.txt)<br/>
+Аддон yandex.ru |  | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [60_ESP32-S3.bin](/offzone2025/60_ESP32-S3.bin)<br/>[60_efuse.txt](/offzone2025/60_efuse.txt)<br/>[60_esptool.txt](/offzone2025/60_esptool.txt)<br/>
+Аддон tbank.ru |  | NTAG 213 144bytes (NT2H1311G0DU) | PWD: 304B346B</br>PACK: 1337 | [70_hf-mfu-044A2F92161E90-dump.json](/offzone2025/70_hf-mfu-044A2F92161E90-dump.json)<br/>[70_hf-mfu-044A2F92161E90-dump.bin](/offzone2025/70_hf-mfu-044A2F92161E90-dump.bin)<br/>[@TBankOffzoneBot](https://t.me/TBankOffzoneBot)
 
 
