@@ -1,0 +1,84 @@
+esptool.py v4.7.0
+Serial port COM40
+Connecting...
+Detecting chip type... ESP32-S3
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC), Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: e4:b3:23:f8:3a:68
+Uploading stub...
+Running stub...
+Stub running...
+Manufacturer: 20
+Device: 4016
+Detected flash size: 4MB
+Flash type set in eFuse: quad (4 data lines)
+Flash voltage set by eFuse to 3.3V
+Hard resetting via RTS pin...
+
+esptool.py v4.7.0
+Serial port COM40
+Connecting...
+Detecting chip type... ESP32-S3
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC), Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: e4:b3:23:f8:3a:68
+Uploading stub...
+Running stub...
+Stub running...
+Warning: ESP32-S3 has no Chip ID. Reading MAC instead.
+MAC: e4:b3:23:f8:3a:68
+Hard resetting via RTS pin...
+
+esptool.py v4.7.0
+Serial port COM40
+Connecting...
+Detecting chip type... ESP32-S3
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC), Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: e4:b3:23:f8:3a:68
+Uploading stub...
+Running stub...
+Stub running...
+MAC: e4:b3:23:f8:3a:68
+Hard resetting via RTS pin...
+
+esptool.py v4.7.0
+Serial port COM40
+Connecting...
+Detecting chip type... ESP32-S3
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC), Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: e4:b3:23:f8:3a:68
+Uploading stub...
+Running stub...
+Stub running...
+
+Security Information:
+=====================
+Flags: 0x00000000 (0b0)
+Key Purposes: (0, 0, 0, 0, 0, 0, 12)
+Chip ID: 9
+API Version: 0
+Secure Boot: Disabled
+Flash Encryption: Disabled
+SPI Boot Crypt Count (SPI_BOOT_CRYPT_CNT): 0x0
+Hard resetting via RTS pin...
+
+esptool.py v4.7.0
+Serial port COM40
+Connecting...
+Detecting chip type... ESP32-S3
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC), Embedded PSRAM 2MB (AP_3v3)
+Crystal is 40MHz
+MAC: e4:b3:23:f8:3a:68
+Uploading stub...
+Running stub...
+Stub running...
+Status value: 0x0200
+Hard resetting via RTS pin...
+
