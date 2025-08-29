@@ -11,27 +11,30 @@ Name | Photo | MCU and pinout | Readout protection | Firmware files and challeng
 Аддон tbank.ru |  | NTAG 213 144bytes (NT2H1311G0DU) | PWD: 304B346B</br>PACK: 1337 | [70_hf-mfu-044A2F92161E90-dump.json](/offzone2025/70_hf-mfu-044A2F92161E90-dump.json)<br/>[70_hf-mfu-044A2F92161E90-dump.bin](/offzone2025/70_hf-mfu-044A2F92161E90-dump.bin)<br/>[@TBankOffzoneBot](https://t.me/TBankOffzoneBot)
 Куб |  | ESP32 | ? | 
 
-Флаги моего бейджа:
-qr = https://t.me/offzone_25_bot?start=2eb340549ca07f5543d07882
-id = 16877566ff92476176e21bb0
-key = 7bd08c38bb6e79b08d39346cc53329631e63d3a1b48454c77d80014dfe324df3
+Флаги моего бейджа: <br/> 
+qr = https://t.me/offzone_25_bot?start=2eb340549ca07f5543d07882<br/> 
+id = 16877566ff92476176e21bb0<br/> 
+key = 7bd08c38bb6e79b08d39346cc53329631e63d3a1b48454c77d80014dfe324df3<br/> 
 
 ID | Task | Flag | Comment |  
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 0 | secret | OFFZONE{DuMp_D1gg3r_X0R_W1nn3r_1204B2B7} | [ZE:RO] is not a villain |
 1 | snake | OFFZONE{T3rm1n4l_Sn4k3_Gg_9636CBD2} | snake w=6 h=6 |
 2 | snake w=2 h=2 | OFFZONE{T1ny_2x2_M4st3r_83E39134} | snake secret => 1337 |
-3 | qmizjsq | OFFZONE{0H_n0_My_F1rmWar3_W4s_DUMPED_E2B9A735} | любпя команда с crc32b = 0x95e968c8 |
+3 | qmizjsq | OFFZONE{0H_n0_My_F1rmWar3_W4s_DUMPED_E2B9A735} | любая команда с crc32b = 0x95e968c8 |
 4 | sudoku -n easy | OFFZONE{q8_SuDoKu_z1A_Mn4p_77LkW_7DB0FBD0} |
 5 | sudoku -n medium | OFFZONE{K9_sudoku_XY_3Zt_Q4bR_1mN_A72344AE} |
 6 | sudoku -n hard | OFFZONE{uU__SUDOKU_7pL0q_A9xM_4Y_1FE1B1B2} |
-7 | sudoku unknown | OFFZONE{z2_SudOkU_A1B_c8N3_0qR_F_444D4EC4} | возможно надо сохраненную игру подправить на флеше |
+7 | sudoku unknown | OFFZONE{z2_SudOkU_A1B_c8N3_0qR_F_444D4EC4} | возможно, надо сохраненную игру подправить на флеше |
 8 | pinokio | OFFZONE{P4t13nT_P@$$w0rD_Cr4Ck3r_968A1475} | каждый верный символ прибавляет 100 мс ко времени проверки |
 9 | wedding | OFFZONE{h@ppy_Dr@90n_w3ll-f3D_Dr@90n_8F4FDC45} | выбираем режим 500 и первое число > 4.250.000.000 |
 10 | - | OFFZONE{holy_moly_you_really_did_it_27DF71A0} | в хранилище флагов лишний флаг |
 
-Прошивка бейджа дампится через выпайку, колодку и picopwner как в прошлом году, даже морозить не пришлось. 
-ID 12 байт лежит по адресу 0x0801F000, KEY 32 байта лежит по адресу 0x0801F00C, сохраненная игра sudoku - по адресу 0x0801F432 Все флаги лежат в конце прошивки по адресу 0x0801FC10 в следующей структуре:
+Прошивка бейджа дампится через выпайку, колодку и picopwner как в прошлом году, даже морозить не пришлось.<br/> 
+ID 12 байт лежит по адресу 0x0801F000, <br/> 
+KEY 32 байта лежит по адресу 0x0801F00C, <br/> 
+сохраненная игра sudoku - по адресу 0x0801F432, <br/> 
+все флаги лежат в конце прошивки по адресу 0x0801FC10 в следующей структуре:
 
 ID | Data_len | Seed | Data_enc |  
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
