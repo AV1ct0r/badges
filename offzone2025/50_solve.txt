@@ -2,7 +2,8 @@
 2. http://192.168.4.1/
 QR_CODE: https://livebots.ru/blizzard.png
 3. <meta name="lock" content="cd9a80989453c290d5086108b00093dc">   <!-- Здесь спрятан ключ , но всё не должно быть просто -->
-cd9a80989453c290d5086108b00093dc -> regcloud
+cd9a80989453c290d5086108b00093dc = md5(regcloud)
 4. https://offzone.reg.cloud/
 https://offzone.reg.cloud/promo.php
 https://www.reg.ru/cloudvps/order_promo?token=offzone2025
+
