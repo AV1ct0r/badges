@@ -6,8 +6,7 @@ Name | Photo | MCU and pinout | Readout protection | Firmware files and challeng
 Аддон bizone (Радио) |  | STM32F405RGT6<br/>GND,NRST,SWCLK,SWDIO,3V3 | RDP Level 0<br/>(SRAM, Flash, SystemMemory access) | [20_STM32F405RGT6_0x1FFF0000_0x8000_SystemMemory_OTP.bin](/offzone2025/20_STM32F405RGT6_0x1FFF0000_0x8000_SystemMemory_OTP.bin)<br/>[20_STM32F405RGT6_0x1FFFC000_0x4000_OptionBytes.bin](/offzone2025/20_STM32F405RGT6_0x1FFFC000_0x4000_OptionBytes.bin)<br/>[20_STM32F405RGT6_0x08000000_0x100000_Flash.bin](/offzone2025/20_STM32F405RGT6_0x08000000_0x100000_Flash.bin)<br/>[20_STM32F405RGT6_0x10000000_0x10000_CCMRAM.bin](/offzone2025/20_STM32F405RGT6_0x10000000_0x10000_CCMRAM.bin)<br/>[20_STM32F405RGT6_0x20000000_0x20000_SRAM.bin](/offzone2025/20_STM32F405RGT6_0x20000000_0x20000_SRAM.bin)
 Аддон ptsecurity.com (Медведи) |  | STM32 | ? |
 Аддон lockpick (Сейф) |  | ATMEGA | ? |
-Аддон reg.ru |  | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [50_ESP32-S3.bin](/offzone2025/50_ESP32-S3.bin)<br/>[50_efuse.txt](/offzone2025/50_efuse.txt)<br/>[50_esptool.txt](/offzone2025/50_esptool.txt)<br/>
-Аддон yandex.ru |  | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [60_ESP32-S3.bin](/offzone2025/60_ESP32-S3.bin)<br/>[60_efuse.txt](/offzone2025/60_efuse.txt)<br/>[60_esptool.txt](/offzone2025/60_esptool.txt)<br/>
+Аддон reg.ru |  | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [50_ESP32-S3.bin](/offzone2025/50_ESP32-S3.bin)<br/>[50_efuse.txt](/offzone2025/50_efuse.txt)<br/>[50_esptool.txt](/offzone2025/50_esptool.txt)<br/>[50_solve.txt]<br/>(/offzone2025/50_solve.txt)
+Аддон yandex.ru |  | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [60_ESP32-S3.bin](/offzone2025/60_ESP32-S3.bin)<br/>[60_efuse.txt](/offzone2025/60_efuse.txt)<br/>[60_esptool.txt](/offzone2025/60_esptool.txt)<br/>[https://hoggr.ru/](https://hoggr.ru/)<br/>[60_hoggr.ru.rar](/offzone2025/60_hoggr.ru.rar)
 Аддон tbank.ru |  | NTAG 213 144bytes (NT2H1311G0DU) | PWD: 304B346B</br>PACK: 1337 | [70_hf-mfu-044A2F92161E90-dump.json](/offzone2025/70_hf-mfu-044A2F92161E90-dump.json)<br/>[70_hf-mfu-044A2F92161E90-dump.bin](/offzone2025/70_hf-mfu-044A2F92161E90-dump.bin)<br/>[@TBankOffzoneBot](https://t.me/TBankOffzoneBot)
-
-
+Куб |  | ESP32 | ? | 
