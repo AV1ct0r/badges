@@ -8,7 +8,7 @@ Name | Photo | MCU and pinout | Readout protection | Firmware files and challeng
 Аддон lockpick (Сейф) |  | ATMEGA | ? |
 Аддон reg.ru | ![](/offzone2025/50.jpg) | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [50_ESP32-S3.bin](/offzone2025/50_ESP32-S3.bin)<br/>[50_efuse.txt](/offzone2025/50_efuse.txt)<br/>[50_esptool.txt](/offzone2025/50_esptool.txt)<br/>[50_solve.txt](/offzone2025/50_solve.txt)
 Аддон yandex.ru | ![](/offzone2025/60.jpg) | ESP32-S3 | Secure Boot: Disabled<br/>Flash Encryption: Disabled | [60_ESP32-S3.bin](/offzone2025/60_ESP32-S3.bin)<br/>[60_efuse.txt](/offzone2025/60_efuse.txt)<br/>[60_esptool.txt](/offzone2025/60_esptool.txt)<br/>[https://hoggr.ru/](https://hoggr.ru/)<br/>[60_hoggr.ru.rar](/offzone2025/60_hoggr.ru.rar)
-Аддон tbank.ru | ![](/offzone2025/70.jpg) | NTAG 213 144bytes (NT2H1311G0DU) | PWD: 304B346B</br>PACK: 1337 | [70_hf-mfu-044A2F92161E90-dump.json](/offzone2025/70_hf-mfu-044A2F92161E90-dump.json)<br/>[70_hf-mfu-044A2F92161E90-dump.bin](/offzone2025/70_hf-mfu-044A2F92161E90-dump.bin)<br/>[@TBankOffzoneBot](https://t.me/TBankOffzoneBot)
+Аддон tbank.ru | ![](/offzone2025/70.jpg) | NTAG 213 144bytes (NT2H1311G0DU) | PWD: 304B346B</br>PACK: 1337 | [70_hf-mfu-044A2F92161E90-dump.json](/offzone2025/70_hf-mfu-044A2F92161E90-dump.json)<br/>[70_hf-mfu-044A2F92161E90-dump.bin](/offzone2025/70_hf-mfu-044A2F92161E90-dump.bin)<br/>[@TBankOffzoneBot](https://t.me/TBankOffzoneBot)<br/>[50_solve.txt](/offzone2025/70_solve.txt)
 Куб |  | ESP32 | ? | 
 
 Флаги моего бейджа: <br/> 
