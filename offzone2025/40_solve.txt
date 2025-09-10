@@ -1,0 +1,7 @@
+<?php
+  // password is random every time
+  $s = "10000110 11101110 00101110 11111010 00101100 00001010 11001100 11000010";
+  for($i=0;$i<strlen($s);$i+=9)
+    echo chr(base_convert(strrev(substr($s, $i, 8)), 2, 10));
+  // flag = awt_4P3C
+
